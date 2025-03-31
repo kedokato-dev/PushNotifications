@@ -68,3 +68,4 @@ node_modules/
 # dataconnect generated files
 .dataconnect
 functions/study-cpp-firebase-adminsdk-fbsvc-8a90bdec30.json
+.vercel

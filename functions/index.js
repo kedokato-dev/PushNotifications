@@ -73,8 +73,17 @@ app.post("/scheduleNotification", (req, res) => {
   });
 });
 
+
 // Khởi động server
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server đang chạy tại http://localhost:${PORT}`);
+// const PORT = 3000;
+// app.listen(PORT, () => {
+//   console.log(`🚀 Server đang chạy tại http://localhost:${PORT}`);
+// });
+
+app.use((err, req, res, next) => {
+  console.error("❌ Lỗi:", err);
+  res.status(500).json({ error: "Đã xảy ra lỗi trên server." });
 });
+
+// Xuất ứng dụng
+module.exports = app;
